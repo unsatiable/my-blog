@@ -6,14 +6,17 @@
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
   </head>
+  
 
   <body>
-    <div>
+    <div class='content'>
+      <header><%= render 'layouts/navigation_bar' %></header>
       <%= yield %>
     </div>
-  </body>  
     <footer>
       <p> &copy; <%= Time.now.year %> Andy Madsen</p>
     </footer>
+  </body>  
+    
   
 </html>

@@ -1,7 +1,14 @@
 TestSite::Application.routes.draw do
+
+ # get|post|put|patch|delete
+
+  get "/gallery", to: "static_pages#gallery" , as: :gallery
+
+  get "/about_me", to: "static_pages#about_me", as: :about_me
+
   resources :posts
 
-  root to: "posts#index"
+  root to: "static_pages#home"
 
 
   # The priority is based upon order of creation:

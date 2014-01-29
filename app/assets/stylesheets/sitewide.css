@@ -1,14 +1,22 @@
 body{
+
   background-color: #072087;
-  border: 2px solid;
+}
+.content{
+  background-color: orange;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 5px 5px;
+  border: solid 2px black;
+  border-radius: 30px; 
 }
- div{ background-color: lightblue;
-}
+
 table{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+footer{
+  font-weight: bold;
 }

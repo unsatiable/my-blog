@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  color: #333;
+  color: #000000;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -8,8 +8,9 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 18px;
+  list-style: none;
 }
 
 pre {
@@ -24,8 +25,12 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #007AFF;
+    background-color: #072087;
+    border: solid, 2px;
+    border-color: #FF8500;
+    border-radius: 5px;
+
   }
 }
 

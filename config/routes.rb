@@ -10,6 +10,10 @@ TestSite::Application.routes.draw do
 
   root to: "static_pages#home"
 
+  resources :posts do
+    post 'comments', to: "posts#create_comment", as: :comments
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

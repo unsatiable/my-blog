@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <b>Title:</b>
   <%= @post.title %>
@@ -22,8 +23,9 @@
 <h3> Comments (<%= @post.comments.count %>) </h3>
 <% @post.comments.each do |comment| %>
   <h4>
+    <hr/>
     <%= comment.author %>
-    <small> <%= time_tag(comment.created_at) %> </small>
+    <small> <%= time_tag(comment.created_at) if comment.created_at %> </small>
     </h4>
     <%= simple_format(comment.message) %>
 <% end %>

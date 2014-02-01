@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.published
+    @posts = Post.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @comment = @post.comments.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -78,6 +79,20 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url }
       format.json { head :no_content }
+    end
+  end
+
+   def create_comment
+    @post = Post.new(params[:post])
+    @comment = @post.comments.new(params[:comment])
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+        format.json { render json: @post, status: :created, location: @post }
+      else
+        format.html { render action: "show" }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
 end

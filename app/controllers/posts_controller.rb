@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    # published_at < Time.now
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +16,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = @post.comments.new
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -82,7 +82,7 @@ class PostsController < ApplicationController
     end
   end
 
-   def create_comment
+  def create_comment
     @post = Post.new(params[:post])
     @comment = @post.comments.new(params[:comment])
     respond_to do |format|

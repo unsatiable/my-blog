@@ -1,34 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'posts/post_display', post: @post %>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
-
-<p>
-  <b>Published at:</b>
-  <%= @post.published_at %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @post.author %>
-</p>
-<h3> Comments (<%= @post.comments.count %>) </h3>
-<% @post.comments.each do |comment| %>
+<h3> Add a comment </h3>
+<%= render 'posts/comment_form' %>
   <h4>
     <hr/>
-    <%= comment.author %>
-    <small> <%= time_tag(comment.created_at) if comment.created_at %> </small>
+    <%= @comment.author %>
+    <small> <%= time_tag(@comment.created_at) if @comment.created_at %> </small>
     </h4>
-    <%= simple_format(comment.message) %>
-<% end %>
+    <%= simple_format(@comment.message) %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

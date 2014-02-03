@@ -7,7 +7,16 @@ gem 'rails', '3.2.16'
 
 gem 'sqlite3'
 
-gem 'pry-rails', :group => :development
+
+
+group :development do
+  gem "better_errors"
+  gem 'pry-rails'
+  gem "binding_of_caller"
+  gem 'meta_request'
+  gem 'xray-rails'
+end
+
 
 
 # Gems used only for assets and not required

@@ -83,11 +83,11 @@ class PostsController < ApplicationController
   end
 
   def create_comment
-    @post = Post.new(params[:post])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new(params[:comment])
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+        format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
         format.html { render action: "show" }

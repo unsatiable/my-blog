@@ -6,8 +6,6 @@ TestSite::Application.routes.draw do
 
   get "/about_me", to: "static_pages#about_me", as: :about_me
 
-  resources :posts
-
   root to: "static_pages#home"
 
   resources :posts do

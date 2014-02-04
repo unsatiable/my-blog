@@ -4,13 +4,14 @@
 
 <h3> Add a comment </h3>
 <%= render 'posts/comment_form' %>
+<%= @post.comments.each do |comment| %>
   <h4>
     <hr/>
-    <%= @comment.author %>
-    <small> <%= time_tag(@comment.created_at) if @comment.created_at %> </small>
+    <%= comment.author %>
+    <small> <%= time_tag(comment.created_at) if comment.created_at %> </small>
     </h4>
-    <%= simple_format(@comment.message) %>
-
+    <%= simple_format(comment.message) %>
+<% end %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

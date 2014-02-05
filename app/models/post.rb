@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   validates :title, 
               length: { in: 3..50 }, 
               uniqueness: true
-  validates :published_at_is_in_the_future, on: :create
+  #validates :published_at_is_in_the_future, true, on: :create
   private
   
   def published_at_is_in_the_future

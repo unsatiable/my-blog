@@ -10,9 +10,9 @@ ruby "2.0.0"
 
 
 group :development do
-  gem "better_errors"
+  gem 'better_errors'
   gem 'pry-rails'
-  gem "binding_of_caller"
+  gem 'binding_of_caller'
   gem 'meta_request'
   gem 'xray-rails'
 end

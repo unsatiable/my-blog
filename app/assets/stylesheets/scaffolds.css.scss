@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  color: #000000;
+  color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -8,9 +8,8 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 13px;
   line-height: 18px;
-  list-style: none;
 }
 
 pre {
@@ -25,12 +24,8 @@ a {
     color: #666;
   }
   &:hover {
-    color: #007AFF;
-    background-color: #072087;
-    border: solid, 2px;
-    border-color: #FF8500;
-    border-radius: 5px;
-
+    color: #fff;
+    background-color: #000;
   }
 }
 
@@ -51,7 +46,6 @@ div {
 }
 
 #error_explanation {
-  text-align: center;
   width: 450px;
   border: 2px solid red;
   padding: 7px;
@@ -59,6 +53,7 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
   h2 {
+    text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;

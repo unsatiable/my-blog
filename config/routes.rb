@@ -1,5 +1,11 @@
 TestSite::Application.routes.draw do
 
+  resources :users
+  get "/sign_up", to: "users#new", as: :sign_up
+  get "/sign_in", to: "sessions#new", as: :sign_in
+  post "/sign_in", to: "sessions#create" as: :create_session
+
+
  # get|post|put|patch|delete
 
   get "/gallery", to: "static_pages#gallery" , as: :gallery

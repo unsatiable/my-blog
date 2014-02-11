@@ -4,10 +4,11 @@
 <% @posts.each do |post| %>
   
     <h3><%= post.title %></h3>
+      <h4><%= post.author %></h4>
       <p>
         <%= post.body %>
+        <br/>
     <%= post.published_at.to_date %>
-    <%= post.author %>
     <%= post.featured %>
     <%= link_to 'Show', post %>
     <%= link_to 'Edit', edit_post_path(post) %>

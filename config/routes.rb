@@ -3,10 +3,12 @@ TestSite::Application.routes.draw do
   resources :users
   get "/sign_up", to: "users#new", as: :sign_up
   get "/sign_in", to: "sessions#new", as: :sign_in
-  post "/sign_in", to: "sessions#create" as: :create_session
+  post "/sign_in", to: "sessions#create", as: :create_session
+  delete "/sign_out", to: "sessions#destroy", as: :sign_out
 
 
  # get|post|put|patch|delete
+  get "/home", to: "static_pages#home" , as: :home
 
   get "/gallery", to: "static_pages#gallery" , as: :gallery
 

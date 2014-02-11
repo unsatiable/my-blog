@@ -5,6 +5,7 @@
     <% if post.featured? %>
       <strong>FEATURED POST</strong>
     <% end %>
+  <br/>  
   </h2>
   <%= link_to 'Show', post %>
   <%= link_to 'Edit', edit_post_path(post) %>
@@ -12,5 +13,5 @@
   <p>
     <%= post.body %>
   </p>
-  <h3 id="comments"> <%= link_to "comments (#{post.comments.count})", post_path(post) + '#comments' %> </h3>
+  <h3> <%= link_to "comments (#{post.comments.count})", post_path(post) + '#comments' %> </h3>
 </article>  

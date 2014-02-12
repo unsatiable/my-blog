@@ -1,9 +1,13 @@
 <h1>HOME</h1>
 
   <% if current_user %>
+  <div class= "pull-right">
     <h2> Hello,<%= current_user.first_name %></h2>
+  </div>
   <% else %>
-    <h2> Please sign in </h2>
+  <div class= "pull-right">
+    <h3> Please sign in </h3>
+  </div>
 
 <% end %>
 

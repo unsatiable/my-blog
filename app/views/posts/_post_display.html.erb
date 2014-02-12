@@ -7,11 +7,11 @@
     <% end %>
   <br/>  
   </h2>
-  <%= link_to 'Show', post %>
-  <%= link_to 'Edit', edit_post_path(post) %>
-  <%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+  <%= link_to 'Show', post, class: "btn btn-info" %>
+  <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
+  <%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-info" %>
   <p>
-    <%= post.body %>
+    <%= simple_format ("post.body") %>
   </p>
   <h3> <%= link_to "comments (#{post.comments.count})", post_path(post) + '#comments' %> </h3>
 </article>  

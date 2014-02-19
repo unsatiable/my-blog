@@ -7,6 +7,7 @@ gem 'rails', '3.2.16'
 
 gem 'pg'
 ruby "2.0.0"
+gem 'simple_form'
 
 
 group :development do
@@ -15,6 +16,13 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'xray-rails'
+  gem 'rack-livereload'
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-pow', require: false
+  gem 'ruby_gntp'
+  gem 'letter_opener'
+
 end
 
 

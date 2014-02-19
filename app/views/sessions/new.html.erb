@@ -1,14 +1,12 @@
 <h1>Sign In</h1>
-
-<%= form_tag create_session_path do %>
-   <div class='feild'>
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email]%>
-   </div>
-   <div class='feild'>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-   </div>
-   <%= submit_tag "Sign in" %>
-
-  <% end %>
+  <div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+      <%= simple_form_for :signin, url: create_session_path, input_html: {value: (params[:signin][:email] if params.has_key?(:signin)) }  do |f| %>
+        <%= f.input :email %>
+        <%= f.input :password %>
+        <div class='text-center'>
+          <%= f.submit "Sign In" %>
+        </div>  
+      <% end %>
+    </div>  
+  </div>

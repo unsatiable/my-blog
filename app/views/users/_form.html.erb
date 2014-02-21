@@ -5,8 +5,11 @@
       <%= f.input :email %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
-      <%= f.input :password %>
-      <%= f.input :password_confirmation %>
+      <%= f.input :profile_picture %>
+      <% if controller.action_name == 'new' or controller.action_name == 'create' %>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation %>
+      <% end %>
       <div class='text-center'>
         <%= f.button :submit %>
       </div>

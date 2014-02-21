@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '~> 3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,6 +8,7 @@ gem 'rails', '3.2.16'
 gem 'pg'
 ruby "2.0.0"
 gem 'simple_form'
+gem 'paperclip', '~> 3.0'
 
 
 group :development do

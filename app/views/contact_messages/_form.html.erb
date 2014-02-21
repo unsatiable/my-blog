@@ -4,9 +4,8 @@
       <%= f.error_notification %>
       <%= f.input :name %>
       <%= f.input :email %>
-      <%= f.input :subject %>
-      <%= f.input :body, input_html: {rows: 6}  %>
       <%= f.input :topic, collection:[["Costomer Service"],["Technical Support"],['Suggestions']] %>
+      <%= f.input :body, input_html: {rows: 6}  %>
 
       <div class='text-center'>
         <%= f.button :submit %>

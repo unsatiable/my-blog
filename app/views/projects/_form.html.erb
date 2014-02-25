@@ -1,0 +1,15 @@
+<div class='row' >
+  <div class='col-sm-6 col-sm-offset-3' >
+    <%= simple_form_for(@project) do |f| %>
+      <%= f.error_notification %>
+      <div class="text-center">
+        <%= f.input :name %>
+        <%= f.input :description,  input_html: {rows: 6} %>
+        <%= f.input :project_picture %>
+      </div>
+      <div class="text-center">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+  </div>
+</div>  

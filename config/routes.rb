@@ -1,5 +1,8 @@
 TestSite::Application.routes.draw do
 
+  resources :projects
+
+
   resources :contact_messages
 
 

@@ -12,6 +12,7 @@ gem 'paperclip', '~> 3.0'
 gem 'devise'
 
 
+
 group :development do
   gem 'better_errors'
   gem 'pry-rails'
@@ -24,6 +25,7 @@ group :development do
   gem 'guard-pow', require: false
   gem 'ruby_gntp'
   gem 'letter_opener'
+
 
 end
 

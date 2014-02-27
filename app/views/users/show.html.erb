@@ -14,7 +14,8 @@
   <b>Last name:</b>
   <%= @user.last_name %>
 </p>
-
-
+<div class='text-center'>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
+<%= display_tags(user) %>

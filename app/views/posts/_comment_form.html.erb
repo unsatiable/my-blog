@@ -1,6 +1,6 @@
 <div class='row' >
   <div class='col-sm-6 col-sm-offset-3' >
-    <%= simple_form_for(@comment, url: post_comments_path(@post)) do |f| %>
+    <%= simple_form_for(@comment, url: post_comments_path(@post), remote: true) do |f| %>
       <%= f.error_notification %>
       <%= f.input :author, placeholder: "ie: Rumple Stiltskin"%><br />
       <%= f.input :message, input_html: {rows: 4}, placeholder: "ie: Na na na na, na na na na, hey hey hey, goodbye!"%><br />

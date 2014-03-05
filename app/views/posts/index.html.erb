@@ -2,24 +2,21 @@
 <h1>Listing posts</h1>
 
 <% @posts.each do |post| %>
-  
-        <div class= "pull-right">
-            <%= link_to 'Show', post, class: "btn btn-info"%>
-            <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %>
-        </div>
-        <h3><%= post.title %></h3>
-        <h4><%= post.author %></h4>
-      <p>
-        <%= post.body %>
-        <br/>
-    <%= post.published_at.to_date %>
-    <%= post.featured %>
-    
+
+  <div class= "pull-right">
+    <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info btn-xs" %>
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info btn-xs" %>
+  </div>
+  <h3><%= link_to (post.title), post%></h3>
+  <h4><%= post.author %></h4>
+  <p>
+    <%= post.body %>
+  </p>
+  <p><%= post.published_at.to_date %><%= ", Featured" if post.featured?%></p>
+  <hr />
 <% end %>
 
 
-<br />
 <div class='text-center'>
-<%= link_to 'New Post', new_post_path %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-info btn-xs"  %>
 </div>

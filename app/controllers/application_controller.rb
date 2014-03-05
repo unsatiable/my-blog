@@ -13,4 +13,5 @@ class ApplicationController < ActionController::Base
       redirect_to root_path, alert: "NOT AUTHORIZED" if current_user.nil?
     end
 
+
 end
